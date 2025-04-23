@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editable Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="colorModeSelector">
+    <label>
+      <input type="radio" name="colorMode" value="text" checked>
+      Text Mode
+    </label>
+    <label>
+      <input type="radio" name="colorMode" value="rgb">
+      RGB Mode
+    </label>
+  </div>
+  <div id="calendar">
+    <div class="month">
+      <button id="prevMonth">&lt;</button>
+      <h2 id="monthName">January</h2>
+      <button id="nextMonth">&gt;</button>
+    </div>
+    <div class="days">
+      <!-- Days will be dynamically generated -->
+    </div>
+    <div id="globalColorContainer">
+      <button id="setGlobalColor">Set Global Color</button>
+      <input type="color" id="rgbColorPicker" style="display: none; margin-left: 10px;">
+      <button id="deleteColor"
+        style="margin-left: 10px; background-color: yellow; border: none; padding: 5px 10px; cursor: pointer;">Delete❌</button>
+      <div id="globalColorButtons"></div>
+    </div>
+  </div>
+  <div id="colorPreview"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

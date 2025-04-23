@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Add spacing between the calendar and the left side */
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+#calendar {
+  width: 500px; /* Increase the width of the calendar */
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto; /* Center the calendar */
+}
+
+.month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  font-size: 1.5rem; /* Increase font size for better visibility */
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #ccc;
+}
+
+.day {
+  background: white;
+  padding: 25px; /* Increase padding for larger day cells */
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.2rem; /* Increase font size for day numbers */
+}
+
+.day:hover {
+  background: #f0f0f0;
+}
+
+.day.editable {
+  background: #ffeb3b;
+}
+
+.day.selected {
+  border: 2px solid black;
+}
+
+#colorButtons button {
+  border-radius: 5px;
+}
+
+#colorModeSelector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Add spacing from the calendar */
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#globalColorContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the global color container */
+  text-align: center;
+}
+
+#globalColorContainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#globalColorContainer button:hover {
+  background-color: #0056b3;
+}
+
+#globalColorButtons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the global color buttons */
+  gap: 5px;
+}
+
+#globalColorButtons button {
+  border-radius: 5px;
+}
+
+/* Remove color preview box styles */
+#colorPreview {
+  display: none;
+}
+
+#applyGlobalColor {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#applyGlobalColor:hover {
+  background-color: #0056b3;
+}
+
+#activateColorPreview {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#activateColorPreview:hover {
+  background-color: #218838;
+}
+
+#deleteGlobalColor {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#deleteGlobalColor:hover {
+  background-color: #c82333;
+}
+
+.global-color-item {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.global-color-item input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+  width: 150px; /* Increase input width for better visibility */
+}
+
+.global-color-item button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.global-color-item button:hover {
+  background-color: #0056b3;
+}
+
+.global-color-item button:last-child {
+  background-color: #dc3545;
+}
+
+.global-color-item button:last-child:hover {
+  background-color: #c82333;
+}
